@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello web <br>
+<strong> Markup Language</strong> Markup Language (Hsheets (CSS) and javascrpit from a web server or from losemantically and originally)<br>
+<strong> Markip Language</strong> (HTML) is the standard markeup alnguage for <strong> web pages and <u>web</u></strong>
+<!-- 주석달려고 어쩔수없이 html다큐멘트 폼을 불러왔당. 
+     DEFINITION H1 TAG 구글검색 
+     https://smartkeyword.io/en/seo-on-page-h1-tag/#definition_balise_h1
+
+-->
+     <!-- 다음과같이설명이되어있다. -->
+     <h2 id="definition_balise_h1" class="intercom-align-left fusion-responsive-typography-calculated"
+      data-fontsize="32" style="--fontSize:32; line-height: 1.2;" data-lineheight="38.4px">H1 tag definition
+    </h2>
+     <p>Tags are often formatted according to their importance: we go from a very visible 
+        rendering for the h1 to a rather discreet rendering for the h6.
+        <a href="https://smartkeyword.io/wp-content/uploads/2018/01/create-1.jpg" data-caption="">
+            <img class="aligncenter wp-image-7055" title="titre-h1-h2-h3-h4-h5-h6"
+             src="https://smartkeyword.io/wp-content/uploads/2020/11/HN-tags-SEO.png"
+              alt="hn-tags-seo" width="734" height="413"></a></p>
+
+    <!-- 어떤가 HTML너무쉽고재밌지아니한가. 하는방법은대략 다음과같다.\
+     원하는페이지를 띄우고 우클릭 검사를누르면 개발자도구가뜨고 해당부분을찾아서복사붙여넣기만하면끝이다. -->
+     
+     <strong> Markip Language</strong> (HTML) is the standard markeup alnguage for <strong> web pages and <u>web</u></strong>
+     <!-- <예제 1-7-1>  <H1~H6>태그 -->
+         <H1>W3C</H1>
+         <H1>THIS IS H1 HEADING</H1>
+         <H2>THIS IS H2 HEADING</H2>
+         <H3>THIS IS H3 HEADING</H3>
+         <h4>THIS IS H4 HEADING</H4>
+            <h5>THIS IS H5 HEADING</H5>
+                <h6>THIS IS H6 HEADING</H6>
+                    <H7>THIS IS H7 HEADING<===H7은없다는것을알수있당.</H7>
+     
+            
+                    <!-- <예제 1-7-2>  제목만들기-->
+ 
+    <H1>HTML</H1>
+    <strong> Markip Language</strong> (HTML) is the standard markeup alnguage for <strong> web pages and <u>web</u></strong>
+    <!-- 쳇 현재 html 실시간 코딩 화면 보면서 진행중인데 
+    본 HTML문서의 변경사항이 생길시에 해당 감지후 자동으로 최하단으로 스크롤할수있게
+    하는 기능을 자바스크립트로 구글링해서 작성하고넘어가려했는데 소요시간 대략30분 샛길로빠지고
+    성공못하여서 그냥 진행하고 추후 기술 습득완료시 다시도전할것으로 남기고 넘어간다.
+    미해결 문제는 앞으로 @YET_SOLVED로 라벨남긴다. 추후에 라벨 정리하여 라벨로검색해서 미해결
+    부분을 해결해나갈 예정이다. -->
+    <!-- 담배한대피고와서해야징 재밋당 ㅋㅋ -->
+
+
+    
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        // 실패스크립트 ㅋㅋㅋㅋ
+//         // Mutation Observer
+//     // 감시 대상 node 선택
+//     let target = document.body
+
+//     // 감시자 인스턴스 만들기
+//     let observer = new MutationObserver((mutations) => {
+//         // 노드가 변경 됐을 때의 작업
+//         window.scrollTo(0,document.body.scrollHeight);
+//         alert('DOM 변경 감지');
+//     })
+
+//     // 감시자의 설정
+//     let option = {
+//         attributes: true,
+//         childList: true,
+//         characterData: true
+//     };
+    
+// // 대상 노드에 감시자 전달
+// observer.observe(target, option);
+
+//             if (document.body.append) {
+//                 window.scrollTo(0,document.body.scrollHeight);
+//             };
+            // 
+
+// 인스턴스 생성
+var observer = new MutationObserver(function(mutations) {
+    window.scrollTo(0,document.body.scrollHeight)
+    // 변경 감지 시 수행할 작업 기술
+});
+
+// 감시할 대상(항목) 설정
+var config = {
+    attributes: true,
+    childList: true,
+    characterData: true
+};
+
+// 감시 대상 노드
+var target = document.body();
+
+// 감시 시작
+observer.observe(target, config);
+
+function after() {
+    // 감시 중지
+    observer.disconnect();
+}
+
+    </script>
+
+
+   
+
+
+</body>
+                
+                
