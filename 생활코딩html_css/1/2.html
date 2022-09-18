@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+</head>
+<body>
+    <p>
+        <h1 style="color:blue;">
+        ===============================&#60;img&#62;
+        이용하기.
+        <p></p>
+        </h1>
+        <h1>
+            &#60img>
+        </h1>
+    </p>
+    <p>
+
+        HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는
+        아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로 하여금 알 수 있도록 
+        하는 마크업 언어입니다. 이는 개발자로 하여금 복잡하게도 간단하게도 프로그래밍 할 수 있니다.
+        <h1>이밑으로는 사진이들어갈것이다. 참고로이문단들은 1.html파일에서쓰던거가져온거다.</h1>
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="구글로고" width="272" height="92">
+        와...구글이놈...난이이미지말고...좋은이미지를원한단말이다
+        //이미지를 가져오는것은 src속성을 이용한다.
+        
+        <h1 id="v1" >보고싶으면 마우스올리숑ㅎㅎ</h1>
+    <div id="v2">
+        <img src="http://img.segye.com/content/image/2016/06/09/20160609515132.jpg">
+        <img src="http://img.segye.com/content/image/2016/06/09/20160609002818_0.jpg">
+        <h2>크...그래이맛이지...</h2>
+    </div>
+    <style>
+      #v2{
+        background-color: #f1f1f1;
+        padding: 20px;
+        margin: 20px;
+        visibility: hidden;
+    }
+    #v1:hover + #v2{
+        visibility: visible;
+    }       
+    </style>
+    <h1>자꾸없어져서 짜증나시나?ㅋㅋㅋ그럼 이걸주지</h1>
+    <button onclick="btnon()" class="btn" >눌러바라 ㅋㅋ</button>
+<script>
+   
+    var btn=document.querySelector("#v2");
+// if(btn.style.visibility=="hidden"){
+
+//     function btnon(){
+        
+//         btn.style.visibility="visible";
+//        coin = 1;
+//     }
+//이미지 온오프 버튼 
+function btnon(){
+    if(btn.style.visibility=="hidden"){
+        btn.style.visibility="visible";
+    }else{
+        btn.style.visibility="hidden";
+    }
+}
+//와미쳤다..코파일러가 해줬다... 이미지온오프버튼 하고 컨트롤 엔터누르고 나온 스크립트하니까된다..미쳤네진짜..
+</script>
+    </p>
+    <p style="margin-top: 350px;">
+        <strong>이문단은 마진 49를 맥여서 다른p태그보다 더 띄어진걸볼수있다.</strong>
+        HTML은 elements로 구성되어 있으며, 이들은 적절한 방법으로 나타내고 실행하기 위해 각 컨텐츠의 여러 
+        부분들을 감싸고 마크업 합니다. tags 는 웹 상의 다른 페이지로 이동하게 하는 하이퍼링크 내용들을 생성하거나,
+        단어를 강조하는 등의 역할을 합니다. 예를들어, 다음의 내용을 봅시다.
+        더블비알사용하였다.
+    </p>
+
+    위와같이 css를 원하는 구문에넣고싶을때는 테그에 <h3> <strong>"style="</strong></h3>이라고 쓰고 원하는 <strong>css를</strong>를 적용해주면된다.
+    <h1 style="color: darkgreen;" ">담배피고와야징~~~</h1>
+    //이렇게하면 담배피고와야징~~~이라는 글자가 빨간색으로 나온다.
+  <!-- [예제 1-11-1] <img>태그 -->
+  //새로고침시 최하단으로가는 버튼 만들기
+  //문서 최하단으로가는 버튼 만들기
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  
+  <script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  //버튼 클릭시 화면 최하단으로가는 버튼만들기 
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  // When the user clicks on the button, scroll to the bottom of the document
+  function botFunction() {
+    document.body.scrollTop = 1000;
+    document.documentElement.scrollTop = 1000;
+  }
+  </script>
+  <style>
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+  }
+  </style>
+    
+</body>
+</html>
