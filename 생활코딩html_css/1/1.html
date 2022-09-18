@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+    <script>
+        // 인스턴스 생성
+var observer = new MutationObserver(function(mutations) {
+    window.scrollTo(0,document.body.scrollHeight)
+    // 변경 감지 시 수행할 작업 기술
+});
+
+// 감시할 대상(항목) 설정
+var config = {
+    attributes: true,
+    childList: true,
+    characterData: true
+};
+
+// 감시 대상 노드
+var target = document.body();
+
+// 감시 시작
+observer.observe(target, config);
+
+function after() {
+    // 감시 중지
+    observer.disconnect();
+}
+        //변경사항 발생시 최하단으로 스크롤시키는 기능 
+        //아래 코드를 복사하여 html문서에 붙여넣기하면 된다. 
+        //단, html문서 상단에 붙여넣기 하여야한다. 
+        //아래코드는 html문서 상단에 붙여넣기 하여야한다. 
+        const targetNode = document.querySelector('body');
+        const config = { attributes: true, childList: true, subtree: true };
+        const callback = function(mutationsList, observer) {
+            for(let mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    window.scrollTo(0,document.body.scrollHeight);
+                }
+                else if (mutation.type === 'attributes') {
+                    window.scrollTo(0,document.body.scrollHeight);
+                }
+            }
+        };
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+    </script>
     hello web <br>
 <strong> Markup Language</strong> Markup Language (Hsheets (CSS) and javascrpit from a web server or from losemantically and originally)<br>
 <strong> Markip Language</strong> (HTML) is the standard markeup alnguage for <strong> web pages and <u>web</u></strong>
@@ -52,13 +96,14 @@
     미해결 문제는 앞으로 @YET_SOLVED로 라벨남긴다. 추후에 라벨 정리하여 라벨로검색해서 미해결
     부분을 해결해나갈 예정이다. -->
     <!-- 담배한대피고와서해야징 재밋당 ㅋㅋ -->
+    <!-- //현재파일 변경사항 발생시 최하단으로 스크롤할수있게하는 자바스크립트 -->
+<!-- 깃 커밋때문에 확장프로그램찾다가 깃파일럿까지불렀는데 지멋대로 뭔추천해서 그것떄문에또 이래저래하다가
+20분날렸다 결국성공못했다 이유는 해당 추천 구문을 이해하고 활용할줄을알아야되는데 그러기에는아직 실력이너무부족해서
+알려줘도 해당 도구사용법을모르는그런수준이다. 추후 숙련시 아주유용할것으로 생각된다.진짜담배피고와야징 -->
+
 
 
     
-
-
-
-
 
 
 
